@@ -15,7 +15,7 @@ async function listInvoices(): Promise<Invoice[]> {
     WHERE invoices.amount = 666;
   `;
 
-  return data;
+  return data as unknown as Invoice[];
 }
 
 export async function GET() {
